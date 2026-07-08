@@ -1,0 +1,11 @@
+name: injection_test
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  exploit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: 'echo "New issue title is: ${{ github.event.issue.title }}"'
