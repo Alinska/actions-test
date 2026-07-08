@@ -1,8 +1,8 @@
 name: security_gate
 on: push
 jobs:
-  runs-on: ubuntu-latest
   block_password_file:
+    runs-on: ubuntu-latest
     steps:
       - name: if_statement
-      run: "[ -f passwords.txt ] && exit 1 || exit 0"
+        run: "[ -f passwords.txt ] && exit 1 || exit 0"
