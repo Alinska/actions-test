@@ -5,7 +5,9 @@ on:
       - opened
 jobs:
   exploit:
+    env:
+      issue_title: ${{github.event.issue.title}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: 'echo "New issue title is: ${{ github.event.issue.title }}"'
+      - run: echo "$issue_title"
