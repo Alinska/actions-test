@@ -5,4 +5,4 @@ jobs:
   block_password_file:
     steps:
       - name: if_statement
-      run: "[ -f passwords.txt ] && exit 1 || exit 0"
+      run: [ -f passwords.txt ] && exit 1 || exit 0
