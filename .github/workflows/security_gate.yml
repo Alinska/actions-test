@@ -4,5 +4,5 @@ jobs:
   block_password_file:
     runs-on: ubuntu-latest
     steps:
-      - name: if_statement
-        run: "[ -f passwords.txt ] && exit 1 || exit 0"
+      - uses: actions/checkout@v4
+      - run: "[ -f passwords.txt ] && exit 1 || exit 0"
